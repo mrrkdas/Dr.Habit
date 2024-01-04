@@ -1,46 +1,34 @@
 //
-//  ContentView.swift
+//  Content2View.swift
 //  Dr.Habit
 //
-//  Created by RKD on 12/24/23.
+//  Created by RKD on 1/3/24.
 //
 
 import SwiftUI
-import UIKit
 
-// we can use a list of questions to ask
-
-/*
-enum Questions {
- 
- 
- 
-}
- 
- 
- 
- */
-
-struct ContentView: View {
+struct Content2View: View {
     var body: some View {
         VStack {
             LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
                 .overlay {
-                    Text("Welcome To Dr. Habit")
-                        .font(.largeTitle)
+                    Text("Username")
+                        .font(.title)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .foregroundStyle(.white)
+                    
+                    Text("Password")
+                        .font(.title)
+                        .fontWeight(.bold)
                         .foregroundStyle(.white)
                 }
     
             
         }
     }
-    
 }
 
-
-
 #Preview {
-    ContentView()
+    Content2View()
 }
