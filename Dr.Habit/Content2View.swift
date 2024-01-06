@@ -9,42 +9,43 @@ import SwiftUI
 
 struct Content2View: View {
     
-    @State private var username: String = ""
+    @State private var name: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
     
     var body: some View {
         VStack {
             LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
                 .overlay {
-                    Text("Username")
-                        .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .foregroundStyle(.white)
+                    Text("Create")
                         .position(x:100, y:100)
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .bold()
+                    Text("Account")
+                        .position(x:115, y:150)
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .bold()
                     
-                    Text("Password")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-                        .frame(alignment:.top)
-                        .position(x:180, y:180)
                     
+                    Form {
+                        
+                        TextField("Enter your name", text: $name)
+                            .position(x:100, y:100)
+                            .foregroundColor(.white)
+                        TextField("Enter your email", text: $email)
+                            .position(x:100, y:100)
+                            .foregroundColor(.white)
+                        SecureField("Enter your Password", text: $password)
+                            .position(x:100, y:100)
+                            .foregroundColor(.white)
+                    }
                     
-                    
-                }
-                .overlay{
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        Text("Password")
-                            .foregroundStyle(.white)
-                            Capsule()
-                                .stroke(lineWidth: 3)
-                                .foregroundColor(.white)
-                                .frame(width: 200, height: 50)
-
-                }
-            
                 }
         }
+        
     }
 }
 
