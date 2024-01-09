@@ -18,31 +18,25 @@ struct Content2View: View {
             LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
                 .overlay {
-                    Text("Create")
-                        .position(x:100, y:100)
-                        .foregroundColor(.white)
+                    Text("Create Account")
                         .font(.largeTitle)
-                        .bold()
-                    Text("Account")
-                        .position(x:115, y:150)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .font(.largeTitle)
-                        .bold()
-                    
-                    
-                    Form {
-                        
-                        TextField("Enter your name", text: $name)
-                            .position(x:100, y:100)
+                        .padding(.bottom, 42)
+                    VStack(spacing: 16.0) {
+                        InputFieldView(data: $email, title: "Email")
+                        InputFieldView(data: $password, title: "Password")
+                    }.padding(.bottom, 16)
+                    Button(action: {}) {
+                        Text("Sign In")
+                            .fontWeight(.heavy)
+                            .font(.title3)
+                            .frame(maxWidth: .infinity)
+                            .padding()
                             .foregroundColor(.white)
-                        TextField("Enter your email", text: $email)
-                            .position(x:100, y:100)
-                            .foregroundColor(.white)
-                        SecureField("Enter your Password", text: $password)
-                            .position(x:100, y:100)
-                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [.pink, .purple]), startPoint: .leading, endPoint: .trailing))
+                            .cornerRadius(40)
                     }
-                    
                 }
         }
         

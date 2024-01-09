@@ -12,6 +12,7 @@
 		DB55D03F2B39160900EFAFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55D03E2B39160900EFAFC1 /* Assets.xcassets */; };
 		DB55D0422B39160900EFAFC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55D0412B39160900EFAFC1 /* Preview Assets.xcassets */; };
 		DB8410582B46601C00B75F8E /* Content2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8410572B46601C00B75F8E /* Content2View.swift */; };
+		DB8DF05F2B4CE2BC00A76D5E /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		DB55D03E2B39160900EFAFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB55D0412B39160900EFAFC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB8410572B46601C00B75F8E /* Content2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content2View.swift; sourceTree = "<group>"; };
+		DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		DB55D0392B39160700EFAFC1 /* Dr.Habit */ = {
 			isa = PBXGroup;
 			children = (
+				DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */,
 				DB8410572B46601C00B75F8E /* Content2View.swift */,
 				DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */,
 				DB55D03C2B39160700EFAFC1 /* ContentView.swift */,
@@ -142,6 +145,7 @@
 			files = (
 				DB8410582B46601C00B75F8E /* Content2View.swift in Sources */,
 				DB55D03D2B39160700EFAFC1 /* ContentView.swift in Sources */,
+				DB8DF05F2B4CE2BC00A76D5E /* InputFieldView.swift in Sources */,
 				DB55D03B2B39160700EFAFC1 /* Dr_HabitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
