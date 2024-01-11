@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct InputFieldView: View {
-    @Binding var data:String
+    @Binding var data: String
     var title: String?
     
-    
     var body: some View {
+        // some code here
         ZStack {
             TextField("", text: $data)
                 .padding(.horizontal, 10)
                 .frame(height: 42)
-                .overlay(
+                .overlay(  // add an overlay
                     RoundedRectangle(cornerSize: CGSize(width: 4, height: 4))
                         .stroke(Color.gray, lineWidth: 1)
                 )
+            
             HStack {                    // HStack for the text
                 Text(title ?? "Input")
                     .font(.headline)
@@ -32,13 +33,20 @@ struct InputFieldView: View {
                 Spacer()                  // pushing the text to the left
             }
             .padding(.leading, 8)
-            .offset(CGSize(width: 0, height: -20))  // pushign the text up to overlay the border of the input field
+            .offset(CGSize(width: 0, height: -20))
         }.padding(4)
+        
     }
-    
 }
 
-#Preview {
-    @State var data: String = ""
-    InputFieldView(data: $data, title: "Password")
+/*#Preview {
+    InputFieldView(data: $data)
+}*/
+
+struct InputFieldView_Previews: PreviewProvider {
+    @State static var data: String = ""
+    
+    static var previews: some View {
+        InputFieldView(data: $data, title: "Password")
+    }
 }
