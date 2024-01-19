@@ -23,18 +23,29 @@ enum Questions {
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
-                .overlay {
-                    Text("Welcome To Dr. Habit")
-                        .font(.largeTitle)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .foregroundStyle(.white)
-                }
-    
-            
+        NavigationView {
+            VStack {
+                LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                    .overlay {
+                        Text("Welcome To Dr. Habit")
+                            .font(.largeTitle)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundStyle(.white)
+                        NavigationLink(destination: Content2View()) {
+                            Text("Continue →")
+                                .font(.title2)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundStyle(.white)
+                                .padding(.top, 90)
+                        }
+                    }
+                
+        
+                
+            }
         }
+        
     }
     
 }

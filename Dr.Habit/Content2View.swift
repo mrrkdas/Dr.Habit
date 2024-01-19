@@ -14,30 +14,34 @@ struct Content2View: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
-                .overlay {
-                    Text("Create Account")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.bottom, 250)
-                    VStack(spacing: 20) {
-                        InputFieldView(data: $email, title: "Email")
-                        InputFieldView(data: $password, title: "Password")
-                    }.padding(.bottom, 40)
-                    Button(action: {}) {
-                        Text("Sign In")
-                            .fontWeight(.heavy)
-                            .font(.title3)
-                            .frame(maxWidth: .infinity)
-                            .padding()
+        NavigationView {
+            VStack {
+                LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                    .overlay {
+                        Text("Create Account")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
                             .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [.pink, .purple]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(40)
-                    }.padding(.top, 200)
-                }
+                            .padding(.bottom, 250)
+                        VStack(spacing: 20) {
+                            InputFieldView(data: $email, title: "Email")
+                            InputFieldView(data: $password, title: "Password")
+                        }.padding(.bottom, 40)
+                        NavigationLink(destination: FewMomentsToAnswer()) {
+                            Button(action: {}) {
+                                Text("Sign In")
+                                    .fontWeight(.heavy)
+                                    .font(.title3)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
+                                    .cornerRadius(40)
+                            }.padding(.top, 200)
+                        }
+                    }
+            }
         }
         
     }
