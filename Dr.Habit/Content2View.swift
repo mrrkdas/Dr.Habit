@@ -22,11 +22,11 @@ struct Content2View: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .padding(.bottom, 42)
-                    VStack(spacing: 16.0) {
+                        .padding(.bottom, 250)
+                    VStack(spacing: 20) {
                         InputFieldView(data: $email, title: "Email")
                         InputFieldView(data: $password, title: "Password")
-                    }.padding(.bottom, 16)
+                    }.padding(.bottom, 40)
                     Button(action: {}) {
                         Text("Sign In")
                             .fontWeight(.heavy)
@@ -36,7 +36,7 @@ struct Content2View: View {
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [.pink, .purple]), startPoint: .leading, endPoint: .trailing))
                             .cornerRadius(40)
-                    }
+                    }.padding(.top, 200)
                 }
         }
         
