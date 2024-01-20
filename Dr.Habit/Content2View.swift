@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Content2View: View {
     
-    @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
     
@@ -28,18 +27,20 @@ struct Content2View: View {
                             InputFieldView(data: $email, title: "Email")
                             InputFieldView(data: $password, title: "Password")
                         }.padding(.bottom, 40)
-                        NavigationLink(destination: FewMomentsToAnswer()) {
+                        
                             Button(action: {}) {
-                                Text("Sign In")
-                                    .fontWeight(.heavy)
-                                    .font(.title3)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
-                                    .cornerRadius(40)
+                                NavigationLink(destination: FewMomentsToAnswer().navigationBarBackButtonHidden(true)) {
+                                    Text("Sign In")
+                                        .fontWeight(.heavy)
+                                        .font(.title3)
+                                        .frame(maxWidth: .infinity)
+                                        .padding()
+                                        .foregroundColor(.white)
+                                        .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
+                                        .cornerRadius(40)
+                                }
                             }.padding(.top, 200)
-                        }
+                        
                     }
             }
         }

@@ -32,7 +32,7 @@ struct ContentView: View {
                             .font(.largeTitle)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundStyle(.white)
-                        NavigationLink(destination: Content2View()) {
+                        NavigationLink(destination: Content2View().navigationBarBackButtonHidden(true)) {
                             Text("Continue →")
                                 .font(.title2)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
