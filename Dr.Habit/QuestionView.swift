@@ -11,6 +11,9 @@ struct QuestionView: View {
     @State private var name: String = ""
     @State private var age: String = ""
     @State private var dob: String = ""
+    @State private var gender: String = ""
+    @State private var height: String = ""
+    @State private var weight: String = ""
     
     
     
@@ -75,21 +78,63 @@ struct QuestionView: View {
                                 .frame(width: 250, height: 100)
                                 .position(x:50, y:210)
                         }
-                        Text("Gender")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .padding(.bottom, 40)
-                        Text("Height")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .padding(.bottom, -30)
-                        Text("Weight")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .padding(.top, 100)
+                        HStack {
+                            Text("Gender")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .position(x:60, y:290)
+                            TextField("Gender", text: $gender)
+                                .padding(.horizontal, 10)
+                                .frame(height: 42)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .overlay(  // add an overlay
+                                    RoundedRectangle(cornerSize: CGSize(width: 60, height: 60))
+                                        .stroke(Color.gray, lineWidth: 1)
+                                )
+                                .frame(width: 250, height: 100)
+                                .position(x:50, y:290)
+                        }
+                        
+                        HStack {
+                            Text("Height")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .position(x:60, y:370)
+                            TextField("Height", text: $height)
+                                .padding(.horizontal, 10)
+                                .frame(height: 42)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .overlay(  // add an overlay
+                                    RoundedRectangle(cornerSize: CGSize(width: 60, height: 60))
+                                        .stroke(Color.gray, lineWidth: 1)
+                                )
+                                .frame(width: 250, height: 100)
+                                .position(x:50, y:370)
+                        }
+                        
+                        HStack {
+                            Text("Weight")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .position(x:60, y: 450)
+                            TextField("Weight", text: $weight)
+                                .padding(.horizontal, 10)
+                                .frame(height: 42)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .overlay(  // add an overlay
+                                    RoundedRectangle(cornerSize: CGSize(width: 60, height: 60))
+                                        .stroke(Color.gray, lineWidth: 1)
+                                )
+                                .frame(width: 250, height: 100)
+                                .position(x:50, y:450)
+
+                        }
                     }
             }
         }
