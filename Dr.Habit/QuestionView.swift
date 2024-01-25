@@ -15,6 +15,7 @@ struct QuestionView: View {
     @State private var height: String = ""
     @State private var weight: String = ""
     
+    @State var choiceMade = "Options"
     
     
     var body: some View {
@@ -84,17 +85,28 @@ struct QuestionView: View {
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
                                 .position(x:60, y:290)
-                            TextField("Gender", text: $gender)
-                                .padding(.horizontal, 10)
-                                .frame(height: 42)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .overlay(  // add an overlay
-                                    RoundedRectangle(cornerSize: CGSize(width: 60, height: 60))
-                                        .stroke(Color.gray, lineWidth: 1)
+                            Menu {
+                                Button(action:{
+                                    choiceMade = "First Option"
+                                }, label: {
+                                    Text("First Option")
+                                })
+                                Button(action:{
+                                    choiceMade = "Second Option"
+                                }, label: {
+                                    Text("Second Option")
+                                })
+                                Button(action:{
+                                    choiceMade = "Third Option"
+                                }, label: {
+                                    Text("Third Option")
+                                })
+                            } label: {
+                                Label(
+                                    title: {Text("\(choiceMade)")},
+                                    icon: {Image(systemName: "plus")}
                                 )
-                                .frame(width: 250, height: 100)
-                                .position(x:50, y:290)
+                            }.position(x:50, y:290)
                         }
                         
                         HStack {
