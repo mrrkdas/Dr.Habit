@@ -29,7 +29,7 @@ struct Content2View: View {
                         }.padding(.bottom, 40)
                         
                             Button(action: {}) {
-                                NavigationLink(destination: FewMomentsToAnswer().navigationBarBackButtonHidden(true)) {
+                                NavigationLink(destination: QuestionView().navigationBarBackButtonHidden(true)) {
                                     Text("Sign In")
                                         .fontWeight(.heavy)
                                         .font(.title3)

@@ -147,8 +147,24 @@ struct QuestionView: View {
                                 .position(x:50, y:450)
 
                         }
-                    }
+                        
+                        VStack {
+                            NavigationLink(destination: WelcomeView().navigationBarBackButtonHidden(true)) {
+                                Text("Continue →")
+                                    .font(.title2)
+                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                    .foregroundStyle(.white)
+                                    .position(x:130, y:650)
+                            }
+
+                        }
+                        
+                        
+                
+                    
+                }
             }
+            
         }
     }
 }
