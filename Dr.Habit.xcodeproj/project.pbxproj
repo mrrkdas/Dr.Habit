@@ -14,6 +14,7 @@
 		DB70FD432B5A1C97003CD14E /* FewMomentsToAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB70FD422B5A1C97003CD14E /* FewMomentsToAnswer.swift */; };
 		DB783DBD2B6355C000505595 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB783DBC2B6355C000505595 /* WelcomeView.swift */; };
 		DB8410582B46601C00B75F8E /* Content2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8410572B46601C00B75F8E /* Content2View.swift */; };
+		DB88C91C2B64AB1C00E495C1 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88C91B2B64AB1C00E495C1 /* HomePageView.swift */; };
 		DB8DF05F2B4CE2BC00A76D5E /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */; };
 		DB9E7D102B5B48F80025E03B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9E7D0F2B5B48F80025E03B /* QuestionView.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		DB70FD422B5A1C97003CD14E /* FewMomentsToAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FewMomentsToAnswer.swift; sourceTree = "<group>"; };
 		DB783DBC2B6355C000505595 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		DB8410572B46601C00B75F8E /* Content2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content2View.swift; sourceTree = "<group>"; };
+		DB88C91B2B64AB1C00E495C1 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		DB9E7D0F2B5B48F80025E03B /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,15 +63,16 @@
 		DB55D0392B39160700EFAFC1 /* Dr.Habit */ = {
 			isa = PBXGroup;
 			children = (
+				DB88C91B2B64AB1C00E495C1 /* HomePageView.swift */,
 				DB70FD422B5A1C97003CD14E /* FewMomentsToAnswer.swift */,
 				DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */,
 				DB9E7D0F2B5B48F80025E03B /* QuestionView.swift */,
+				DB783DBC2B6355C000505595 /* WelcomeView.swift */,
 				DB8410572B46601C00B75F8E /* Content2View.swift */,
 				DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */,
 				DB55D03C2B39160700EFAFC1 /* ContentView.swift */,
 				DB55D03E2B39160900EFAFC1 /* Assets.xcassets */,
 				DB55D0402B39160900EFAFC1 /* Preview Content */,
-				DB783DBC2B6355C000505595 /* WelcomeView.swift */,
 			);
 			path = Dr.Habit;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				DB8DF05F2B4CE2BC00A76D5E /* InputFieldView.swift in Sources */,
 				DB9E7D102B5B48F80025E03B /* QuestionView.swift in Sources */,
 				DB55D03B2B39160700EFAFC1 /* Dr_HabitApp.swift in Sources */,
+				DB88C91C2B64AB1C00E495C1 /* HomePageView.swift in Sources */,
 				DB783DBD2B6355C000505595 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
