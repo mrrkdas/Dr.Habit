@@ -17,6 +17,7 @@
 		DB88C91C2B64AB1C00E495C1 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB88C91B2B64AB1C00E495C1 /* HomePageView.swift */; };
 		DB8DF05F2B4CE2BC00A76D5E /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */; };
 		DB9E7D102B5B48F80025E03B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9E7D0F2B5B48F80025E03B /* QuestionView.swift */; };
+		DBC391852B689B3700F44B49 /* LifeScoreChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC391842B689B3700F44B49 /* LifeScoreChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		DB88C91B2B64AB1C00E495C1 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		DB9E7D0F2B5B48F80025E03B /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		DBC391842B689B3700F44B49 /* LifeScoreChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeScoreChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				DB88C91B2B64AB1C00E495C1 /* HomePageView.swift */,
+				DBC391842B689B3700F44B49 /* LifeScoreChart.swift */,
 				DB70FD422B5A1C97003CD14E /* FewMomentsToAnswer.swift */,
 				DB8DF05E2B4CE2BC00A76D5E /* InputFieldView.swift */,
 				DB9E7D0F2B5B48F80025E03B /* QuestionView.swift */,
@@ -163,6 +166,7 @@
 				DB55D03B2B39160700EFAFC1 /* Dr_HabitApp.swift in Sources */,
 				DB88C91C2B64AB1C00E495C1 /* HomePageView.swift in Sources */,
 				DB783DBD2B6355C000505595 /* WelcomeView.swift in Sources */,
+				DBC391852B689B3700F44B49 /* LifeScoreChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
