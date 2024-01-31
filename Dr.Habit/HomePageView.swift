@@ -31,6 +31,13 @@ struct HomePageView: View {
                             .padding(.top, 60)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
+                        Text("Life Score")
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                            .padding(.top, 120)
+                            .foregroundColor(.white)
+                        
+                        
                         Chart {
                             LineMark(x: .value("Type", "bird"),
                                     y: .value("Population", 1))
@@ -44,8 +51,28 @@ struct HomePageView: View {
                                     y: .value("Population", 3))
                             .foregroundStyle(.blue)
                         }
-                        .aspectRatio(1, contentMode: .fit)
-                        .padding()
+                        .aspectRatio(2, contentMode: .fit)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: 370)
+                        .position(x: 199, y:250)
+                        .foregroundStyle(.white)
+                        .chartXAxis {AxisMarks(values: .automatic) {
+                            AxisValueLabel()
+                                .foregroundStyle(Color.white)// <= change the style of the label
+                            
+                            AxisGridLine()
+                                .foregroundStyle(Color.white)// <= change the style of the line
+                        }
+                        }
+                        .chartYAxis {AxisMarks(values: .automatic) {
+                            AxisValueLabel()
+                                .foregroundStyle(Color.white)// <= change the style of the label
+                            
+                            AxisGridLine()
+                                .foregroundStyle(Color.white)// <= change the style of the line
+                        }
+                        }
+
                     }
             }
         }
