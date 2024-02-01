@@ -72,8 +72,33 @@ struct HomePageView: View {
                                 .foregroundStyle(Color.white)// <= change the style of the line
                         }
                         }
+                        Text("My Habits")
+                            .position(x:79, y:380)
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .fontWeight(.bold)
+                        ScrollView {
+                            LazyVStack(spacing: 10) {
+                                ForEach(0..<100) {
+                                    
+                                    Text("Item \($0)")
+                                        .fontWeight(.heavy)
+                                        .font(.title3)
+                                        .frame(maxWidth: 340)
+                                        .padding()
+                                        .foregroundColor(.white)
+                                        .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
+                                        .cornerRadius(40)
+                                }
+                                        
+                                }
+                        }
+                        .position(x:190, y:800)
+                        .contentMargins(2)
+                        
+                        }
 
-                    }
+                    
             }
         }
     }
