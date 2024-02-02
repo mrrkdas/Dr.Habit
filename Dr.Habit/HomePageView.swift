@@ -40,15 +40,15 @@ struct HomePageView: View {
                         
                         Chart {
                             LineMark(x: .value("Type", "bird"),
-                                    y: .value("Population", 1))
+                                     y: .value("Population", 1))
                             .foregroundStyle(.pink)
-
+                            
                             LineMark(x: .value("Type", "dog"),
-                                    y: .value("Population", 10))
+                                     y: .value("Population", 10))
                             .foregroundStyle(.green)
-
+                            
                             LineMark(x: .value("Type", "cat"),
-                                    y: .value("Population", 3))
+                                     y: .value("Population", 3))
                             .foregroundStyle(.blue)
                         }
                         .aspectRatio(2, contentMode: .fit)
@@ -77,27 +77,27 @@ struct HomePageView: View {
                             .foregroundColor(.white)
                             .font(.title)
                             .fontWeight(.bold)
-                        ScrollView {
-                            LazyVStack(spacing: 10) {
-                                ForEach(0..<100) {
-                                    
-                                    Text("Item \($0)")
-                                        .fontWeight(.heavy)
-                                        .font(.title3)
-                                        .frame(maxWidth: 340)
-                                        .padding()
-                                        .foregroundColor(.white)
-                                        .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
-                                        .cornerRadius(40)
-                                }
+                            ScrollView {
+                                LazyVStack(spacing: 10) {
+                                    ForEach(0..<100) {
                                         
+                                        Text("Item \($0)")
+                                            .fontWeight(.heavy)
+                                            .font(.title3)
+                                            .frame(maxWidth: 340)
+                                            .padding()
+                                            .foregroundColor(.white)
+                                            .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
+                                            .cornerRadius(40)
+                                    }
+                                    
                                 }
-                        }
-                        .position(x:190, y:800)
-                        .contentMargins(2)
+                            }
+                            .position(x:190, y:600)
+                            .scaleEffect(x: 1, y: 5)
                         
-                        }
-
+                    }
+            
                     
             }
         }
