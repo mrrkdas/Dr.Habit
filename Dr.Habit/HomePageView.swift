@@ -93,8 +93,7 @@ struct HomePageView: View {
                                     
                                 }
                             }
-                            .position(x:190, y:600)
-                            .scaleEffect(x: 1, y: 5)
+                            .position(x:190, y:800)
                         
                     }
             
