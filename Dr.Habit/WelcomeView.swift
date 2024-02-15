@@ -25,7 +25,19 @@ struct WelcomeView: View {
                             .foregroundStyle(.white)
                             .padding(.top, 50)
                             .multilineTextAlignment(.center)
+                        VStack {
+                            NavigationLink(destination: HomePageView().navigationBarBackButtonHidden(true)) {
+                                Text("Continue →")
+                                    .font(.title2)
+                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                    .foregroundStyle(.white)
+                                    .position(x:200, y:650)
+                            }
+
+                        }
+
                                             }
+                                
             }
         }
     }

@@ -94,6 +94,7 @@ struct HomePageView: View {
                                 }
                             }
                             .position(x:190, y:800)
+                            .padding(.bottom, -40)
                         
                     }
             
