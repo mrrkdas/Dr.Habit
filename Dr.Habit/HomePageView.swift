@@ -77,24 +77,7 @@ struct HomePageView: View {
                             .foregroundColor(.white)
                             .font(.title)
                             .fontWeight(.bold)
-                            ScrollView {
-                                LazyVStack(spacing: 10) {
-                                    ForEach(0..<100) {
-                                        
-                                        Text("Item \($0)")
-                                            .fontWeight(.heavy)
-                                            .font(.title3)
-                                            .frame(maxWidth: 340)
-                                            .padding()
-                                            .foregroundColor(.white)
-                                            .background(LinearGradient(gradient: Gradient(colors: [.myPurple, .purple]), startPoint: .leading, endPoint: .trailing))
-                                            .cornerRadius(40)
-                                    }
-                                    
-                                }
-                            }
-                            .position(x:190, y:800)
-                            .padding(.bottom, -40)
+                        ScrollViewforWelcome()
                         
                     }
             
