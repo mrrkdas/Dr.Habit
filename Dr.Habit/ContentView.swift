@@ -21,34 +21,43 @@ enum Questions {
  
  */
 
-struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            VStack {
-                LinearGradient(gradient: Gradient(colors: [.myPurple, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
-                    .overlay {
-                        Text("Welcome To Dr. Habit")
-                            .font(.largeTitle)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .foregroundStyle(.white)
-                        NavigationLink(destination: Content2View().navigationBarBackButtonHidden(true)) {
-                            Text("Continue →")
-                                .font(.title2)
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                .foregroundStyle(.white)
-                                .padding(.top, 90)
-                        }
-                    }
-                
-        
-                
+extension View {
+    func animate(using animation: Animation = .easeInOut(duration: 1), _ action: @escaping () -> Void) -> some View {
+        onAppear {
+            withAnimation(animation) {
+                action()
             }
+        }
+    }
+}
+
+struct ContentView: View {
+    @State var scale = 1.0
+    
+    var body: some View {
+        Color("myBackgroundColor")
+            .ignoresSafeArea()
+            .overlay {
+                VStack {
+                        Text("Dr. Habit")
+                            .font(.system(size:65))
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color("myDarkPurple"))
+                            .scaleEffect(scale)
+                            .animate {
+                                scale = 1.5
+                            }
+            }
+            
+                
+                        
+            }
+            
         }
         
     }
     
-}
+
 
 
 

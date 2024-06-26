@@ -78,6 +78,8 @@ struct HomePageView: View {
                             .font(.title)
                             .fontWeight(.bold)
                         ScrollViewforWelcome()
+                            .padding(.top, 20)
+                            .padding(.bottom, 20)
                         
                     }
             
