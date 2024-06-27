@@ -21,33 +21,32 @@ enum Questions {
  
  */
 
-extension View {
-    func animate(using animation: Animation = .easeInOut(duration: 1), _ action: @escaping () -> Void) -> some View {
-        onAppear {
-            withAnimation(animation) {
-                action()
-            }
-        }
-    }
-}
 
 struct ContentView: View {
-    @State var scale = 1.0
+    @State var opacity = 0.0
     
     var body: some View {
         Color("myBackgroundColor")
             .ignoresSafeArea()
             .overlay {
                 VStack {
-                        Text("Dr. Habit")
-                            .font(.system(size:65))
-                            .fontWeight(.bold)
-                            .foregroundStyle(Color("myDarkPurple"))
-                            .scaleEffect(scale)
-                            .animate {
-                                scale = 1.5
-                            }
-            }
+                    Text("Dr. Habit")
+                        .font(.system(size:65))
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color("myDarkPurple"))
+                        .opacity(opacity)
+                        .onAppear{
+                            let baseAnimation = Animation.easeIn(duration: 2)
+                            let repeated = baseAnimation.repeatCount(1)
+                            
+                            withAnimation(repeated) {
+                                opacity = 1
+                                            }
+                            
+                            
+                            
+                        }
+                }
             
                 
                         
