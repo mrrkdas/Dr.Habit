@@ -11,7 +11,11 @@
 		DB55D03D2B39160700EFAFC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55D03C2B39160700EFAFC1 /* ContentView.swift */; };
 		DB55D03F2B39160900EFAFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55D03E2B39160900EFAFC1 /* Assets.xcassets */; };
 		DB55D0422B39160900EFAFC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55D0412B39160900EFAFC1 /* Preview Assets.xcassets */; };
-		DBBB9FCF2C2CF671007F40E5 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB9FCE2C2CF671007F40E5 /* HomePage.swift */; };
+		DBAB96442C2F4092002E32E3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAB96432C2F4092002E32E3 /* HomeView.swift */; };
+		DBAB96462C2F40F2002E32E3 /* Tabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAB96452C2F40F2002E32E3 /* Tabview.swift */; };
+		DBAB964A2C2F48A3002E32E3 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAB96492C2F48A3002E32E3 /* AddView.swift */; };
+		DBAB964C2C2F4C13002E32E3 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAB964B2C2F4C13002E32E3 /* DetailsView.swift */; };
+		DBAB964E2C2F5958002E32E3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAB964D2C2F5958002E32E3 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +24,11 @@
 		DB55D03C2B39160700EFAFC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB55D03E2B39160900EFAFC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB55D0412B39160900EFAFC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DBBB9FCE2C2CF671007F40E5 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		DBAB96432C2F4092002E32E3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DBAB96452C2F40F2002E32E3 /* Tabview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabview.swift; sourceTree = "<group>"; };
+		DBAB96492C2F48A3002E32E3 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		DBAB964B2C2F4C13002E32E3 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		DBAB964D2C2F5958002E32E3 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +62,14 @@
 			isa = PBXGroup;
 			children = (
 				DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */,
+				DBAB96432C2F4092002E32E3 /* HomeView.swift */,
+				DBAB96452C2F40F2002E32E3 /* Tabview.swift */,
+				DBAB964D2C2F5958002E32E3 /* SettingView.swift */,
+				DBAB964B2C2F4C13002E32E3 /* DetailsView.swift */,
 				DB55D03C2B39160700EFAFC1 /* ContentView.swift */,
-				DBBB9FCE2C2CF671007F40E5 /* HomePage.swift */,
 				DB55D03E2B39160900EFAFC1 /* Assets.xcassets */,
 				DB55D0402B39160900EFAFC1 /* Preview Content */,
+				DBAB96492C2F48A3002E32E3 /* AddView.swift */,
 			);
 			path = Dr.Habit;
 			sourceTree = "<group>";
@@ -141,8 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB55D03D2B39160700EFAFC1 /* ContentView.swift in Sources */,
-				DBBB9FCF2C2CF671007F40E5 /* HomePage.swift in Sources */,
+				DBAB964A2C2F48A3002E32E3 /* AddView.swift in Sources */,
+				DBAB96462C2F40F2002E32E3 /* Tabview.swift in Sources */,
+				DBAB964E2C2F5958002E32E3 /* SettingView.swift in Sources */,
+				DBAB96442C2F4092002E32E3 /* HomeView.swift in Sources */,
 				DB55D03B2B39160700EFAFC1 /* Dr_HabitApp.swift in Sources */,
+				DBAB964C2C2F4C13002E32E3 /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
