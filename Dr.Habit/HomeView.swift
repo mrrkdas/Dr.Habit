@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var name = "Rishab" // we will later get this from firebase
     var body: some View {
+        NavigationStack{
         Color("myBackgroundColor")
             .ignoresSafeArea()
             .overlay {
@@ -25,21 +26,29 @@ struct HomeView: View {
                     .offset(x:-50, y:-264)
                 
                 
-                VStack {
-                    HStack {
-                        Spacer()
-
-                            NavigationLink(destination: SettingView()) {
-                                Image(systemName: "person")
+                    
+                    
+                    VStack {
+                        HStack {
+                            Spacer()
+                            
+                            
+                            NavigationLink{
+                                SettingView()
+                            } label: {
+                                Label("", systemImage: "person")
+                                    .font(.system(size: 30))
                                     .foregroundColor(Color("myDarkPurple"))
-                                    .font(.system(size: 40.0))
-                                
+                                    .padding(.trailing, 13)
+                                    
                             }
-                            .padding(.trailing, 25) // Adjust the padding as needed
-
-                    }
-                            Spacer()//place the spacer as per your UI need
+                                
+                            
                         }
+                        Spacer()//place the spacer as per your UI need
+                    }
+                }
+                
             }
     }
 }
