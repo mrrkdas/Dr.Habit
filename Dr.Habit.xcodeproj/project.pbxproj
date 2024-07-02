@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1FE6F62C33765E005494AC /* WeekCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FE6F52C33765E005494AC /* WeekCalendarView.swift */; };
 		DB55D03B2B39160700EFAFC1 /* Dr_HabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */; };
 		DB55D03D2B39160700EFAFC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55D03C2B39160700EFAFC1 /* ContentView.swift */; };
 		DB55D03F2B39160900EFAFC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55D03E2B39160900EFAFC1 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1FE6F52C33765E005494AC /* WeekCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarView.swift; sourceTree = "<group>"; };
 		DB55D0372B39160700EFAFC1 /* Dr.Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dr.Habit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dr_HabitApp.swift; sourceTree = "<group>"; };
 		DB55D03C2B39160700EFAFC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */,
+				DB1FE6F52C33765E005494AC /* WeekCalendarView.swift */,
 				DBAB96432C2F4092002E32E3 /* HomeView.swift */,
 				DBAB96452C2F40F2002E32E3 /* Tabview.swift */,
 				DBAB964D2C2F5958002E32E3 /* SettingView.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				DB55D03D2B39160700EFAFC1 /* ContentView.swift in Sources */,
 				DBAB964A2C2F48A3002E32E3 /* AddView.swift in Sources */,
+				DB1FE6F62C33765E005494AC /* WeekCalendarView.swift in Sources */,
 				DBAB96462C2F40F2002E32E3 /* Tabview.swift in Sources */,
 				DBAB964E2C2F5958002E32E3 /* SettingView.swift in Sources */,
 				DBAB96442C2F4092002E32E3 /* HomeView.swift in Sources */,

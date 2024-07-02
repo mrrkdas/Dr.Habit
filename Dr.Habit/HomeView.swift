@@ -9,6 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     @State var name = "Rishab" // we will later get this from firebase
+    @State var selectedDate: Date = Date()
+    
+    
+    
     var body: some View {
         NavigationStack{
         Color("myBackgroundColor")
@@ -47,6 +51,10 @@ struct HomeView: View {
                         }
                         Spacer()//place the spacer as per your UI need
                     }
+                
+                // Date Picker
+                DatePicker("Select Date", selection: $selectedDate, displayedComponents: [.date])
+                    .padding(.horizontal)
                 }
                 
             }
