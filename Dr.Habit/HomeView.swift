@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var name = "Rishab" // we will later get this from firebase
     @State var selectedDate: Date = Date()
+    @State var score: Float = 1.2 // We will get this from data
     
     
     
@@ -55,7 +56,7 @@ struct HomeView: View {
                 //Text For Date Picker (seperate because for UI)
                 ZStack {
                     Text("Select Date: ")
-                        .position(x:67, y:105)
+                        .position(x:69, y:105)
                         .transformEffect(.init(scaleX: 1.7, y: 1.7))
                     
                     
@@ -71,10 +72,42 @@ struct HomeView: View {
                     
                 }
                 .fontWeight(.bold)
+                
+                
 
+                
+                Text("Todays Score:")
+                    .position(x: 89,y:236)
+                    .fontWeight(.bold)
+                    .font(.system(size:13))
+                    .background(
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color("myLightPurple"))
+                            .frame(width:108, height: 167)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(.black, lineWidth: 2)
+                                
+                            )
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                            .position(x: 89, y:300)
+                            .overlay(
+                                Text(String(score))
+                                    .position(x: 89, y:300)
+                                    .font(.system(size:45))
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(Color("myDarkPurple"))
+                            )
+
+                            
+                    
+                    )
+                
+                    
+                    
             }
                 
-            }
+        }
     }
 }
 
