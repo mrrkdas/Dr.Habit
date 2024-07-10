@@ -7,12 +7,42 @@
 
 import SwiftUI
 
+
+//checkbox struct
+struct CheckboxItem {
+    var name: String
+    var isChecked: Bool
+}
+
+struct CheckboxView: View {
+    @Binding var item: CheckboxItem
+    
+    var body: some View {
+        HStack {
+            Text(item.name)
+            Spacer()
+            Image(systemName:
+                  item.isChecked ? "checkmark.circle.fill" : "circle")
+            .foregroundColor(item.isChecked ?
+                .green : .gray)
+                .font(.system(size: 22))
+        }
+    }
+}
+
+
+//
+
+
 struct HomeView: View {
     @State var name = "Rishab" // we will later get this from firebase
     @State var selectedDate: Date = Date()
     @State var score: Float = 1.2 // We will get this from data
     
-    
+    @State private var items = [
+        CheckboxItem(name: "Workout for 30 minutes", isChecked: false),
+        CheckboxItem(name: "Read for 5 minutes", isChecked: false),
+    ]
     
     var body: some View {
         NavigationStack{
@@ -77,7 +107,7 @@ struct HomeView: View {
 
                 
                 Text("Todays Score:")
-                    .position(x: 89,y:236)
+                    .position(x: 89,y:241)
                     .fontWeight(.bold)
                     .font(.system(size:13))
                     .background(
@@ -103,8 +133,20 @@ struct HomeView: View {
                     
                     )
                 
-                    
-                    
+                
+                List {
+                    ForEach($items, id: \.name) {
+                        $item in
+                        CheckboxView(item:   $item)
+                    }
+                }
+                
+                
+                
+                
+                
+                
+                
             }
                 
         }
