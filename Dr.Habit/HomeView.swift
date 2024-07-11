@@ -25,7 +25,7 @@ struct CheckboxView: View {
                   item.isChecked ? "checkmark.circle.fill" : "circle")
             .foregroundColor(item.isChecked ?
                 .green : .gray)
-                .font(.system(size: 22))
+                .font(.system(size: 18))
         }
     }
 }
@@ -39,9 +39,13 @@ struct HomeView: View {
     @State var selectedDate: Date = Date()
     @State var score: Float = 1.2 // We will get this from data
     
+    // TO-DO: Add toggle to list
     @State private var items = [
         CheckboxItem(name: "Workout for 30 minutes", isChecked: false),
         CheckboxItem(name: "Read for 5 minutes", isChecked: false),
+        CheckboxItem(name: "Karate for 1 hour", isChecked: false),
+        CheckboxItem(name: "Meditate for 20 minutes", isChecked: false),
+        CheckboxItem(name: "Limit Screen Time", isChecked: false),
     ]
     
     var body: some View {
@@ -134,12 +138,34 @@ struct HomeView: View {
                     )
                 
                 
+                Text("Your Habits: ")
+                    .font(.system(size:30))
+                    .position(x: 264,y:241)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color("myDarkPurple"))
+                
+                
+                // Changing the position of this
                 List {
                     ForEach($items, id: \.name) {
                         $item in
                         CheckboxView(item:   $item)
+                            .padding(10)
+                            .listRowBackground(Color("myBackgroundColor"))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.black, lineWidth: 2)
+                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                    .frame(width: 190, height: 55)
+                            )
                     }
                 }
+                .frame(maxHeight: 100)
+                .frame(maxWidth: 230)
+                .position(x:264, y:310)
+                .scrollContentBackground(.hidden)
+                .listStyle(.automatic)
+                
                 
                 
                 
