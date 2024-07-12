@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 
 //checkbox struct
@@ -31,7 +32,20 @@ struct CheckboxView: View {
 }
 
 
-//
+// Chart Struct
+// Multiple Lines: https://www.appcoda.com/swiftui-line-charts/
+struct HabitScoreData: Identifiable {
+    let id = UUID()
+    let date: Date
+    let score: Double
+    
+    init(year: Int, month: Int, day: Int, score: Double) {
+        self.date = Calendar.current.date(from:.init(year: year, month: month, day: day)) ?? Date()
+        self.score = score
+    }
+}
+
+
 
 
 struct HomeView: View {
@@ -46,6 +60,14 @@ struct HomeView: View {
         CheckboxItem(name: "Karate for 1 hour", isChecked: false),
         CheckboxItem(name: "Meditate for 20 minutes", isChecked: false),
         CheckboxItem(name: "Limit Screen Time", isChecked: false),
+    ]
+    
+    let scores = [
+        HabitScoreData(year: 2024, month: 7, day: 3, score: 0.9),
+        HabitScoreData(year: 2024, month: 7, day: 4, score: 1.9),
+        HabitScoreData(year: 2024, month: 7, day: 5, score: 4.1),
+        HabitScoreData(year: 2024, month: 7, day: 6, score: 4.9),
+        //You need to fetch the date
     ]
     
     var body: some View {
@@ -151,7 +173,7 @@ struct HomeView: View {
                         $item in
                         CheckboxView(item:   $item)
                             .padding(10)
-                            .listRowBackground(Color("myBackgroundColor"))
+                            .listRowBackground(Color("myLightPurple")) // TO-DO: Fix list row background color
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(.black, lineWidth: 2)
@@ -167,10 +189,42 @@ struct HomeView: View {
                 .listStyle(.automatic)
                 
                 
-                
-                
-                
-                
+                //Chart View
+//                Text("Habit Score")
+//                    .multilineTextAlignment(.center)
+//                    .padding(.top, 65)
+//                    .fontWeight(.bold)
+//                    .foregroundStyle(Color("myDarkPurple"))
+//                    .font(.system(size:30))
+
+                GroupBox("Habit Score") {
+                    Chart{
+                        ForEach(scores) {item in
+                            LineMark(
+                                x: .value("Month", item.date),
+                                y: .value("Score", item.score)
+                            )
+                            .symbol(.circle)
+                            .interpolationMethod(.catmullRom)
+                            .lineStyle(.init(lineWidth: 5))
+                            .foregroundStyle(Color("myDarkPurple"))
+                            
+                            AreaMark(
+                                x: .value("Month", item.date),
+                                y: .value("Score", item.score)
+                            )
+                            .interpolationMethod(.catmullRom)
+                            .foregroundStyle(Color("myLightPurple"))
+                        }
+                    }
+                    .frame(width: 340, height: 150)
+                    .padding(.top, 290)
+                    .chartPlotStyle { plotArea in
+                        plotArea
+                            .background(Color("myLightPurple").opacity(0.2))
+                    }
+                }
+                .frame // TO-DO: Change height of group box
                 
                 
             }
