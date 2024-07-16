@@ -130,7 +130,7 @@ struct HomeView: View {
                 .fontWeight(.bold)
                 
                 
-
+                
                 
                 Text("Todays Score:")
                     .position(x: 89,y:241)
@@ -154,9 +154,9 @@ struct HomeView: View {
                                     .fontWeight(.bold)
                                     .foregroundStyle(Color("myDarkPurple"))
                             )
-
-                            
-                    
+                        
+                        
+                        
                     )
                 
                 
@@ -189,15 +189,15 @@ struct HomeView: View {
                 .listStyle(.automatic)
                 
                 
-                //Chart View
-//                Text("Habit Score")
-//                    .multilineTextAlignment(.center)
-//                    .padding(.top, 65)
-//                    .fontWeight(.bold)
-//                    .foregroundStyle(Color("myDarkPurple"))
-//                    .font(.system(size:30))
-
-                GroupBox("Habit Score") {
+                    Text("Habit Score")
+//                        .multilineTextAlignment(.center)
+                        .padding(.top, 20)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color("myDarkPurple"))
+                        .font(.system(size:30))
+                        .position(x: 195, y:400)
+                    
+                    
                     Chart{
                         ForEach(scores) {item in
                             LineMark(
@@ -217,16 +217,22 @@ struct HomeView: View {
                             .foregroundStyle(Color("myLightPurple"))
                         }
                     }
+                    .position(x: 173, y:90)
                     .frame(width: 340, height: 150)
                     .padding(.top, 290)
                     .chartPlotStyle { plotArea in
                         plotArea
                             .background(Color("myLightPurple").opacity(0.2))
                     }
-                }
-                .frame // TO-DO: Change height of group box
+                    
                 
                 
+                Text("Good habits make a strong mind")
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color("myDarkPurple"))
+                    .font(.system(size:30))
+                    .position(x:193, y: 640)
+                    .multilineTextAlignment(.center)
             }
                 
         }
