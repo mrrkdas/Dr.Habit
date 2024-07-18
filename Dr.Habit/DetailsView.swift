@@ -145,6 +145,14 @@ struct DetailsView: View {
                     
                     
                     //Recommended Habits List
+                    Text("Recommended Habits")
+                        .font(.system(size:30))
+                        .multilineTextAlignment(.center)
+                        .position(x: 195,y:300)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color("myDarkPurple"))
+                    
+                    // Somehow we have to get these from a model
                     
                 }
             
