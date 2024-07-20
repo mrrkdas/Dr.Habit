@@ -63,13 +63,13 @@
 			children = (
 				DB55D03A2B39160700EFAFC1 /* Dr_HabitApp.swift */,
 				DBAB96432C2F4092002E32E3 /* HomeView.swift */,
+				DBAB96492C2F48A3002E32E3 /* AddView.swift */,
 				DBAB96452C2F40F2002E32E3 /* Tabview.swift */,
 				DBF1BDED2C46041B00C784C5 /* ContentView.swift */,
 				DBAB964D2C2F5958002E32E3 /* SettingView.swift */,
 				DBAB964B2C2F4C13002E32E3 /* DetailsView.swift */,
 				DB55D03E2B39160900EFAFC1 /* Assets.xcassets */,
 				DB55D0402B39160900EFAFC1 /* Preview Content */,
-				DBAB96492C2F48A3002E32E3 /* AddView.swift */,
 			);
 			path = Dr.Habit;
 			sourceTree = "<group>";
